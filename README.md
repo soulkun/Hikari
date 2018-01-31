@@ -3,7 +3,7 @@ Hikari, A proxy tool which helps you break through network restrictions.
 
 Hikari client listens on a local socket port and wait for incoming SOCKS4 or SOCKS5 requests,
 when incoming SOCKS requests arrived, the client process the request and try to connect to Hikari server using Hikari protocol.
-When a connection between Hikari client and Hikari server established
+When a connection has been established between Hikari client and Hikari server,
 the client side response the SOCKS request and is ready for proxy.
 
 Process:
@@ -12,7 +12,7 @@ Process:
 
 ### Usage
 1. Install Java (version 8 or newer);
-2. Download the server or client executable jar file and configuration file;
+2. Download the server or client .jar file and configuration file;
 3. Run command: ```java -jar /path/to/jar_file/xxx.jar /path/to/config_file/xxx.json```;
 4. Enjoy（´・ω・`）
 
