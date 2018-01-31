@@ -1,14 +1,14 @@
 ### About
 Hikari, A proxy tool which helps you break through network restrictions.
 
-Hikari client listens on a local socket port and wait for incoming SOCKS4 or SOCKS5 requests,
+The Hikari client listens on a local socket port and wait for incoming SOCKS4 or SOCKS5 requests,
 when incoming SOCKS requests arrived, the client process the request and try to connect to Hikari server using Hikari protocol.
 When a connection has been established between Hikari client and Hikari server,
 the client side response the SOCKS request and is ready for proxy.
 
 Process:
 
-> local app <---[plain data]---> Hikari client <---[Hikari protocol(encrypted)]---> Hikari server <---[plain data]---> target app
+> local app <---[plaintext]---> Hikari client <---[Hikari protocol (ciphertext)]---> Hikari server <---[plaintext]---> target app
 
 ### Usage
 1. Install Java (version 8 or newer);
@@ -18,22 +18,22 @@ Process:
 
 ### Configuration
 * Server Configuration:
-  * listenAddress: listening address;
-  * listenPortList: related port;
-  * privateKeyList: the list of allowed user keys;
-  * bufferSize: size of data buffer, keep default 2048 please;
-  * encryptType: encryption type, must be same with server;
-  * secret: the key when encrypting, must be same with server;
+  * listenAddress: Listening address;
+  * listenPortList: Related port;
+  * privateKeyList: Allowed user keys list;
+  * bufferSize: Size of data buffer, default value is 2048, if you are not sure, keep the default;
+  * encryptType: Encryption type (see down below), must be same with server;
+  * secret: The key that used to encryption, must be same with server;
 
 * Client Configuration:
-  * listenAddress: listening address, often 'localhost' or '127.0.0.1';
-  * listenPort: related port;
-  * localDnsResolve: 'true': using local DNS resolving; 'false': using remote(server) DNS resolving;
-  * bufferSize: size of data buffer, keep default 2048 please;
-  * encryptType: encryption type, must be same with server;
-  * secret: the key when encrypting, must be same with server;
-  * serverAddress: the server listening address, IP address or Hostname;
-  * serverPortList: the server listening port;
+  * listenAddress: Listening address, most commonly use 'localhost' or '127.0.0.1';
+  * listenPort: Related port;
+  * localDnsResolve: 'true': Use local DNS resolution; 'false': Use remote(server) DNS resolution;
+  * bufferSize: Size of data buffer, default value is 2048, if you are not sure, keep the default;
+  * encryptType: Encryption type (see down below), must be same with server;
+  * secret: The key that used to encryption, must be same with server;
+  * serverAddress: Server's listening address, IP address or Hostname;
+  * serverPortList: Server's listening port;
   * privateKey: User key;
   
 ### Supported Encryption Types
