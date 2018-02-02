@@ -18,23 +18,23 @@ Process:
 
 ### Configuration
 * Server Configuration:
-  * listenAddress: Listening address;
-  * listenPortList: Related port;
-  * privateKeyList: Allowed user keys list;
-  * bufferSize: Size of data buffer, default value is 2048, if you are not sure, keep the default;
-  * encryptType: Encryption type (see down below), must be same with server;
-  * secret: The key that used to encryption, must be same with server;
+  * listenAddress:       Listening address;
+  * listenPortList:      Related port;
+  * privateKeyList:      Allowed user keys list;
+  * bufferSize:          Size of data buffer, default value is 2048, if you are not sure, keep the default;
+  * encryptType:         Encryption type (see down below), must be same with server;
+  * secret:              The key that used to encryption, must be same with server;
 
 * Client Configuration:
-  * listenAddress: Listening address, most commonly use 'localhost' or '127.0.0.1';
-  * listenPort: Related port;
-  * localDnsResolve: 'true': Use local DNS resolution; 'false': Use remote(server) DNS resolution;
-  * bufferSize: Size of data buffer, default value is 2048, if you are not sure, keep the default;
-  * encryptType: Encryption type (see down below), must be same with server;
-  * secret: The key that used to encryption, must be same with server;
-  * serverAddress: Server's listening address, IP address or Hostname;
-  * serverPortList: Server's listening port;
-  * privateKey: User key;
+  * listenAddress:       Listening address, most commonly use 'localhost' or '127.0.0.1';
+  * listenPort:          Related port;
+  * localDnsResolve:     'true': Use local DNS resolution; 'false': Use remote(server) DNS resolution;
+  * bufferSize:          Size of data buffer, default value is 2048, if you are not sure, keep the default;
+  * encryptType:         Encryption type (see down below), must be same with server;
+  * secret:              The key that used to encryption, must be same with server;
+  * serverAddress:       Server's listening address, IP address or Hostname;
+  * serverPortList:      Server's listening port;
+  * privateKey:          User key;
   
 ### Supported Encryption Types
   * AES (recommend)
